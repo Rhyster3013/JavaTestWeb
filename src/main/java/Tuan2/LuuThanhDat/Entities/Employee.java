@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Data
@@ -14,4 +15,11 @@ public class Employee {
     private String title;
     private String phone;
     private Date birth;
+
+
+    // Phương thức định dạng ngày tháng
+    public String getFormattedBirthDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return dateFormat.format(birth);
+    }
 }
